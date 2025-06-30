@@ -1,18 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css'
+import Home from './components/home';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div className='text-center'>
-        <p className="text-lg font-bolder">
-          Click on the Vite and React logos to learn more
-        </p>
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
